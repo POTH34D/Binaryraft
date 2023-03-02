@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BinaryRaft</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+      background-color: #fdfdfd;
+			color: rgb(0, 0, 0);
+		}
+
+		header {
+			background-color: #fefefe;
+			padding: 20px;
+			text-align: left;
+
+		}
+
+		#logo {
+			display: inline-block;
+			height: 50px;
+			width: 50px;
+			background-image: url("logo.jpg");
+			background-size: contain;
+			background-repeat: no-repeat;
+			margin-right: 10px;
+		}
+
+		section {
+			max-width: 100%;
+			margin: 10 auto;
+	padding: 20px;
+	padding-left: 50px;
+			display: flex;
+		}
+
+		.section-left {
+			flex: 1;
+			padding-right: 20px;
+      margin-top: 0%;
+			flex-direction: column;
+    
+		}
+
+		.section-right {
+			flex: 1;
+      scale: 1.0;
+			padding-left: 20px;
+position: inherit;
+		} 
+
+
+
+
+		button {
+			background-color: #000;
+			color: #fff;
+			padding: 10px 20px;
+			border-radius: 10px;
+			border: none;
+			scale: 1.1;
+			margin-right: 10px;
+			cursor: pointer;
+			transition: 0.5s;
+		}
+    button:hover{
+
+      scale: 1.2;
+    }
+
+
+		input[type="text"], input[type="tel"], input[type="email"] {
+			padding: 10px;
+			border-radius: 10px;
+			border: none;
+			margin-bottom: 20px;
+		}
+
+		input[type="submit"] {
+			background-color: #000;
+			color: #fff;
+			padding: 10px 20px;
+			border-radius: 10px;
+			border: none;
+			cursor: pointer;
+		} 
+		footer {
+			background-color: #ffffff;
+			padding: 20px;
+			text-align: center;
+		}
+    .enquiry{
+    background-color: rgb(236, 236, 236);
+	margin: 50px;
+	padding-left: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	max-width: fit-content;
+	padding-right: 45px;
+	border-radius: 25px;
+	}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="logo.jpg" alt="Logo">
+		<hr>
+	</header>
+	<section>
+		<div style="flex: 1;" class="section-left">
+			<h1>ABOUT US</h1>
+			<p>Are you looking for cutting-edge software solutions to help take your business to the next level? Look no further than BinaryRaft, a leading provider of innovative software solutions for businesses of all sizes.<br>
+
+        At BinaryRaft, we believe in transparency and communication throughout the development process. You will be informed every step of the way to ensure that you are completely satisfied with the final product. Plus, we offer ongoing support and maintenance to ensure that your software is always running smoothly.
+        
+        <br><br>To learn more about our services and how we can help you, give a call or mail us.</p>
+		<br>
+    <div>
+
+			<button id="button" onclick="location.href='tel:8606821125';" style="background-color: black; color: white; border-radius: 10px; padding: 10px 20px;">Call</button>
+			<button id="button" onclick="location.href='mailto:binaryraft@gmail.com';" style="background-color: black; color: white; border-radius: 10px; padding: 10px 20px;">Email</button>
+</div>
+    </div>
+    </div>
+		<div  class="section-right" style="flex: 1;">
+<img src="vid.gif" alt="welcome" width="100%">
+		</div><br>
+	</section>
+<center>
+	<div class="enquiry">
+		<h1>Schedule a meeting?</h1>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" style="border-radius: 10px; border: 1px solid black; padding: 5px;">
+          <br><label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" style="border-radius: 10px; border: 1px solid black; padding: 5px;">
+          <br><label for="email">Email :</label>
+          <input type="email" id="email" name="email" style="border-radius: 10px; border: 1px solid black; padding: 5px;">
+          <br><button onclick="sendEnquiry()" style="background-color: black; color: white; border-radius: 10px; padding: 10px 20px;">Book Enquiry</button>
+		</div>
+</center>
+
+
+  <br>
+
+	<footer>
+		<hr>
+		<p>&copy; 2023 BinaryRaft. All rights reserved.</p>
+	</footer>
+	<script>
+		function sendEnquiry() {
+			let name = document.getElementById("name").value;
+			let phone = document.getElementById("phone").value;
+			let email = document.getElementById("email").value;
+			let message = "Enquiry Details: \nName: " + name + "\nPhone: " + phone + "\nEmail: " + email;
+			window.location.href = "mailto:binaryraft@gmail.com?subject=New Enquiry&body=" + encodeURIComponent(message);
+		}
+	</script>
+</body>
+
+
+</html>
